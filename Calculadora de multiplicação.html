@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+   
+<h1>Calculadora</h1>
+
+<br>
+<label>Valor X</label>
+<input type="number" id="valorx"></input>
+<br>
+<br>
+<label>Valor Y</label>
+<input type="number" id="valory"></input>
+
+<br>
+<br>
+<button type="button" onclick="calcular()">Calcular</button>
+
+<br>
+<label>Resultado</label>
+<br>
+<input type ="number" id="resultado"></input>
+
+<script type="text/javascript">
+    function calcular(){
+        let valorx = document.getElementById('valorx').value
+        let valory = document.getElementById('valory').value
+
+        let resultado = parseFloat(valorx) * parseFloat(valory)
+
+        document.getElementById('resultado').value = resultado
+        alert('Cálculo realizado com sucesso!')
+    }
+</script>
+</body>
+</html>
