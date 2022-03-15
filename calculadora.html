@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Calculadora do Mundo</title>
+</head>
+<body>
+
+    <h2>Calculadora Simples</h2>
+    <label>Valor de x</label>
+    <input type=" number" id="x">
+
+    <br><br>
+
+    <labe>Valor de y</labe>   
+    <input type="number" name="" id="y">
+
+    <br><br>
+
+    <label>Resultado</label>
+  <input type="number"id="z" readonly>
+
+  <br><br>
+
+  <button onclick="somar()">+</button>
+  <button onclick="multiplicar()">*</button>
+  <button onclick="subtrair()">-</button>
+  <button onclick="dividir()">/</button>
+  <button onclick="potencia()">**</button>
+  <button onclick="raizquadrada()">√</button>
+  <button onclick="restodadivisao()">%</button>
+  <button onclick="limpar()">limpar</button>
+     
+  <script>
+      const somar = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) + parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const multiplicar = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) * parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const subtrair = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) - parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const dividir = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) / parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const potencia = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) ** parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const raizquadrada = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = Math.sqrt(parseFloat(x),parseFloat(y))
+          document.getElementById('z').value = z
+      }
+      const restodadivisao = function(){
+          let x = document.getElementById('x').value
+          let y = document.getElementById('y').value
+          z = parseFloat(x) % parseFloat(y)
+          document.getElementById('z').value = z
+      }
+      const limpar = function(){
+          let x = document.getElementById('x').value - document.getElementById('x').value
+          let y = document.getElementById('y').value - document.getElementById('y').value
+          x = (" ")
+          y = (" ")
+          z = (" ")
+          document.getElementById('x').value = x
+          document.getElementById('y').value = y
+          document.getElementById('z').value = z
+      }
+  </script>
+</body>
+</html>
